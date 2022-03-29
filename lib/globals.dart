@@ -15,7 +15,7 @@ const Color myGreen = Color.fromRGBO(34, 140, 19, 1);
 final Color myGrey = Colors.grey.shade700;
 final Color myDarkGrey = Colors.grey.shade900;
 const Color myBlack = Colors.black;
-final Color myWhite = Colors.grey.shade300; //Colors.white;
+const Color myWhite = Colors.white; //Colors.white;
 const Color myRed = Colors.red;
 const Color myBlue =
     Color.fromRGBO(58, 134, 255, 1); //Color.fromRGBO(43, 139, 251,1);
@@ -39,21 +39,21 @@ const Color bonusFlashColor = myGreen;
 final Color plainClockColor = myDarkGrey;
 const Color guessPlainFill = myBlack;
 const Color mainBackgroundColor = myBlack;
-final Color letterTextColor = myWhite;
-final Color buttonTextColor = myWhite;
+const Color letterTextColor = myWhite;
+const Color buttonTextColor = myWhite;
 const Color myWarningColor = myRed;
 const Color myButtonColor = myBlue;
-const Color myPaleButtonColor = myPaleBlue;
+//const Color myPaleButtonColor = myPaleBlue;
 const Color myButtonAccent = myBlueAccent;
 final Color disabledButtonColor = myLightGrey;
 final Color disabledButtonTextColor = myMidGrey;
 const Color cursorColor = myPurple;
 final Color notGotTextColor = myGrey;
-final Color myScoreColor = myWhite;
+const Color myScoreColor = myWhite;
 const Color titleColor = myPurple;
-final Color highScoreColor = myWhite;
-final Color clockTextColor = myWhite;
-final Color popupMenuTextColor = myWhite;
+const Color highScoreColor = myWhite;
+const Color clockTextColor = myWhite;
+const Color popupMenuTextColor = myWhite;
 final Color customFormBackgroundColor = myNiceGrey;
 
 //styles

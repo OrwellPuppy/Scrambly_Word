@@ -164,7 +164,7 @@ class MenuScreen extends StatelessWidget {
                             ])),
                     Padding(
                         padding: EdgeInsets.only(
-                            top: topSpace * 2, bottom: topSpace),
+                            top: topSpace * 2, bottom: 0), //topSpace),
                         child: Text(
                           '- info -',
                           style: myStyle(myFontSize, 'mainSubTitle'),
@@ -269,8 +269,8 @@ class HowToScreen extends StatelessWidget {
               },
               label: Text('RETURN TO MENU',
                   style: myStyle(buttonFontSize, 'buttonStyle')),
-              icon:  Icon(Icons.arrow_back, color: buttonTextColor),
-              backgroundColor: myPaleButtonColor,
+              icon:  const Icon(Icons.arrow_back, color: buttonTextColor),
+              backgroundColor: myButtonColor,
             ),
             body: SingleChildScrollView(
                 child: Padding(
@@ -568,8 +568,8 @@ class ScoreScreen extends StatelessWidget {
         },
         label: Text('RETURN TO MENU',
             style: myStyle(buttonFontSize, 'buttonStyle')),
-        icon:  Icon(Icons.arrow_back, color: buttonTextColor),
-        backgroundColor: myPaleButtonColor,
+        icon:  const Icon(Icons.arrow_back, color: buttonTextColor),
+        backgroundColor: myButtonColor,
       ),
     ));
   }
@@ -631,7 +631,6 @@ class GameScreen extends StatelessWidget {
           ),
         )) ??
             false;
-
     }
 
     return WillPopScope(
@@ -662,6 +661,9 @@ class GameScreen extends StatelessWidget {
                         gMod.cancelAll();
                         Navigator.pop(context);
                       }),
+                          Consumer<GameModel>(builder: (context, gModU, child) {
+                            return Text('SCORE: ${gMod.score.toString().padLeft(4, '0')}',
+                                style: myStyle(gMod.buttonFontSize * .65, 'scoreLabel'));}),
                       Expanded(
                         child: AnimatedList(
                             shrinkWrap: true,
@@ -683,7 +685,6 @@ class GameScreen extends StatelessWidget {
                   margin: const EdgeInsets.symmetric(horizontal: 3),
                 ),
               ),
-              //TODO: guess box here
               Flexible(
                 flex: 4,
                 child: Stack(children: [
@@ -752,9 +753,7 @@ class GameScreen extends StatelessWidget {
                                   gMod.vertMarginSpace / 2,
                                   gMod.scramble)),
                         ]))),
-    Consumer<GameModel>(builder: (context, gModU, child) {
-                    return Text('SCORE: ${gMod.score.toString().padLeft(4, '0')}',
-                        style: myStyle(gMod.buttonFontSize * .65, 'scoreLabel'));})
+
                   ])),
             ]),
             IgnorePointer(

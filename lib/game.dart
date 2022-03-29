@@ -1307,7 +1307,7 @@ class _MyCustomFormState extends State<MyCustomForm>
             child: RawMaterialButton(
                 materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
                 fillColor: currentButtonColor,
-                textStyle:  TextStyle(color: buttonTextColor),
+                textStyle:  const TextStyle(color: buttonTextColor),
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(80)),
                 splashColor: myButtonAccent,
@@ -1564,11 +1564,20 @@ class _MyClockState extends State<MyClock> {
         shape: BoxShape.circle,
       ),
       child: Center(
-          child: Text(
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children:[
+                Icon(Icons.hourglass_top_sharp,
+                    size: gMod.clockFontSize*.33, color: Colors.transparent),
+                Text(
         '$displayTicks',
         textAlign: TextAlign.center,
         style: myStyle(gMod.clockFontSize, 'clockStyle'),
-      )),
+          ),
+                Icon(Icons.hourglass_top_sharp,
+                    size: gMod.clockFontSize*.33, color: myWhite),
+              ])),
     );
   }
 }

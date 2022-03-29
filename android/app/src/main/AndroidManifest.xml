@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.scrambly.word.scrambly_word_web">
    <application
-        android:label="scrambly_word_web"
+        android:label="Scrambly Word"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
